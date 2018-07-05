@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    @*<script type="text/javascript">
+        function show(id) { document.getElementById(id).style.display = 'block'; }
+    </script>*@
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+        Бронирование переговорных
+    </header><!-- .header-->
+
+    @*<div class="wrapper">*@
+        <main class="content"><br />
+    <p>Чтобы забронировать переговорную, выберите дату.</p>
+            <p class="top-img"><img src="~/images/top.png"></p>
+            <p class="left-img"><img src="~/images/left.png"></p>
+            <p class="right-img"><img src="~/images/right.png"></p>
+            <table style="text-align: center; width: 90%; height: 90%" cellpadding="2" cellspacing="2" align="center">
+                <thead>
+                    <tr>
+                        <td id="td1" style="padding-top:0.5%; padding-bottom:0.5%">Пн</td>
+                        <td style="padding-top:0.5%; padding-bottom:0.5%">Вт</td>
+                        <td style="padding-top:0.5%; padding-bottom:0.5%">Ср</td>
+                        <td style="padding-top:0.5%; padding-bottom:0.5%">Чт</td>
+                        <td style="padding-top:0.5%; padding-bottom:0.5%">Пт</td>
+                        <td style="padding-top:0.5%; padding-bottom:0.5%; border-color: #fa9e9e">Сб</td>
+                        <td style="padding-top:0.5%; padding-bottom:0.5%; border-color: #fa9e9e">Вс</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < 5; i++)
+                    {
+                    <tr>
+                        @for (int j = 1; j < 8; j++)
+                        {
+                            @if (j < 6)
+                            {
+                                 <td id="td2"style="background: linear-gradient(#F0FFF0,#ffffff)"; onclick='opendialog()'> @j  </td> 
+                                //  <td style="background: linear-gradient(#F0FFF0,	#ffffff)">@j</td>
+                            }
+                            else
+                            {
+                                <td id="td2"style="background: linear-gradient(#FFE4E1,	#ffffff); border-color: #fa9e9e">@j</td>
+                            }
+                        }
+                    </tr>
+                    }
+                </tbody>
+            </table>
+            
+
+            <p class="bottom-img"><img src="~/images/bottom.png"></p>
+        </main><!-- .content -->
+
+    @*</div>*@<!-- .wrapper -->
+
+    <footer class="footer">
+        2018 - Практика в ММТР
+    </footer><!-- .footer -->
+
+</body>
+</html>
+
