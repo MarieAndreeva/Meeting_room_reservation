@@ -1,1 +1,2 @@
-# Meeting_room_reservation
+# Meeting_room_reservation  
+Сайт для бронирования переговорных
